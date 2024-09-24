@@ -1,0 +1,19 @@
+﻿@model conexcion
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/Layout1.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Eliminar inmobiliaria</h5>
+    <div class="card-body">
+        <form asp-action="Eliminar" asp-controller="Alumno" method="post">
+            <input asp-for="idEquipo" type="hidden" class="form-control">
+            <div class="alert alert-danger" role="alert">
+                ¿Desea borrar los datos del imoviliario?
+            </div>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a asp-action="Listar" asp-controller="Alumno" class="btn btn-warning">Cancelar</a>
+        </form>
+    </div>
+</div>

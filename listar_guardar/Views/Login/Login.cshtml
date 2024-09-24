@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/Layout1.cshtml";
+}
+
+<form>
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" id="Nombre">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <a asp-action="Listar" asp-controller="Alumno" class="btn btn-primary btn-sm">Administrador</a>
+    <a asp-action="Listar" asp-controller="Equipos" class="btn btn-primary btn-sm">Usuario normal</a>
+</form>

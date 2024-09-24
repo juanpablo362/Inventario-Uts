@@ -1,0 +1,41 @@
+﻿@model conexcion
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/Layout1.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Editar inmobiliria</h5>
+    <div class="card-body">
+        <form asp-action="Editar" asp-controller="Alumno" method="post">
+            <input asp-for="idEquipo" type="hidden" class="form-control">
+            <div class="mb-3">
+                <label class="form-label">Numero de computadoras</label>
+                <input asp-for="Computadoras" type="text" class="form-control">
+                <span asp-validation-for="Computadoras" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Color de silla</label>
+                <input asp-for="Sillas" type="text" class="form-control">
+                <span asp-validation-for="Sillas" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">¿Hay alguna herramienta en el laboratio?</label>
+                <input asp-for="Herramientas" type="text" class="form-control">
+                <span asp-validation-for="Herramientas" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">¿Cuantos cables hay por cada computadora?</label>
+                <input asp-for="Cables" type="text" class="form-control">
+                <span asp-validation-for="Cables" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Matricula de alumno</label>
+                <input asp-for="Matricula_Alum" type="text" class="form-control">
+                <span asp-validation-for="Matricula_Alum" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="Alumno" class="btn btn-warning">Cancelar</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@model List<reportevista> 
+@{
+    ViewData["Title"] = "reporte";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Lista de reportes</h5>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Grupo</th>
+            <th>Reporte</th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nombres</td>
+                        <td>@item.Apellidos</td>
+                        <td>@item.Grupo</td>
+                        <td>@item.texto</td>                      
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

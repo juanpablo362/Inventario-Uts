@@ -1,0 +1,37 @@
+﻿@model List<conexcion>
+@{
+    ViewData["Title"] = "Lab1101";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Lab1101</h5>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+            <th>Computadora</th>
+            <th>Silla</th>
+            <th>Herramienta</th>
+            <th>Cables</th>
+            <th>Matricula del alumno</th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Computadoras</td>
+                        <td>@item.Sillas</td>
+                        <td>@item.Herramientas</td>
+                        <td>@item.Cables</td>
+                        <td>@item.Matricula_Alum</td>
+                        <td>
+                            <a asp-action="Editar" asp-controller="Alumno" class="btn btn-primary btn-sm" asp-route-idEquipo="@item.idEquipo">Editar</a>
+                            <a asp-action="Eliminar" asp-controller="Alumno" class="btn btn-danger btn-sm" asp-route-idEquipo="@item.idEquipo">Eliminar</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

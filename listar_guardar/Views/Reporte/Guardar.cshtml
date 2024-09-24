@@ -1,0 +1,25 @@
+﻿@model reportes
+@{
+    ViewData["Title"] = "Guardar";
+    Layout = "~/Views/Shared/Layout2.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Añadir Reporte</h5>
+    <div class="card-body">
+        <form asp-action="Guardar" asp-controller="Reporte" method="post">
+            <div class="mb-3">
+                <label class="form-label">Reporte</label>
+                <textarea asp-for="texto" type="text" class="form-control"></textarea>
+                <span asp-validation-for="texto" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"> Añada su matricula</label>
+                <input asp-for="Matricula_alum" type="number" class="form-control">
+                <span asp-validation-for="Matricula_alum" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="Equipos" class="btn btn-warning">Cancelar</a>
+        </form>
+    </div>
+</div>
